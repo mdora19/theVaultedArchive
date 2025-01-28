@@ -42,14 +42,18 @@
             font-family: 'Lora', serif;
         }
         .blurb {
-            background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque white */
-            backdrop-filter: blur(5px); /* Blurred background */
+            background-image: url('https://raw.githubusercontent.com/mdora19/theVaultedArchive/main/american_flag.avif'); 
+            background-size: cover; /* Make sure the image covers the box */
+            background-position: center;
+            background-blend-mode: overlay; /* Blend the flag with the overlay */
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
+            backdrop-filter: blur(5px); /* Optional: add blur effect to the background */
             padding: 1.5rem;
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             margin: 2rem auto;
-        }
+}
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
