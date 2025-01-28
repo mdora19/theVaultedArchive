@@ -7,19 +7,37 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        html, body {
+            min-height: 100vh; /* Ensures the body is full height */
+            display: flex;
+            flex-direction: column; /* This will make the footer stay at the bottom */
+            margin: 0; /* Removes default margin */
+        }
+        
         body {
             background-image: url('https://raw.githubusercontent.com/mdora19/theVaultedArchive/main/possible_background_2.avif');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             font-family: 'Lora', serif;
+            margin: 0;
+            flex-grow: 1;
         }
+        
         header {
             background-color: rgba(0, 0, 0, 0.7); /* Transparent black header */
             font-family: 'Lora', serif;
             padding: 1rem;
             color: white;
         }
+        
+        footer {
+            margin-top: auto; /* Pushes footer to the bottom */
+            background-color: #2d2d2d; /* Charcoal gray footer */
+            text-align: center;
+            padding: 1rem;
+        }
+        
         nav, h1, h2, p, a {
             font-family: 'Lora', serif;
         }
@@ -56,7 +74,7 @@
 
         <section class="blurb">
             <h2 class="text-xl font-bold mb-2">About Us</h2>
-            <p class="text-md">The Vaulted Archive is represents the history that makes America that greatest country in the world. Americans should know the history of their nation. Our mission is to provide daily bits of information so we can all become better Americans.</p>
+            <p class="text-md">The Vaulted Archive represents the history that makes America that greatest country in the world. Americans should know the history of their nation. Our mission is to provide daily bits of information so we can all become better Americans.</p>
         </section>
     </main>
 
