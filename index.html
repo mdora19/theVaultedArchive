@@ -5,9 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('path/to/your-image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Lora', serif;
+        }
+        header {
+            background-color: rgba(75, 83, 32, 0.9); /* Semi-transparent Army green matching background */
+            font-family: 'Lora', serif;
+        }
+        nav, h1, h2, p, a {
+            font-family: 'Lora', serif;
+        }
+        .blurb {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque white */
+            backdrop-filter: blur(5px); /* Blurred background */
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
-    <header class="bg-blue-600 text-white p-4 shadow-md">
+    <header class="text-white p-4 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-xl font-bold">The Vaulted Archive</h1>
             <nav>
@@ -22,13 +48,18 @@
 
     <main class="container mx-auto py-8">
         <section id="home" class="my-8">
-            <h2 class="text-2xl font-bold mb-4">Welcome to The Vaulted Archive</h2>
-            <p class="text-lg">Explore interesting facts and get in touch with us!</p>
+            <h2 class="text-2xl font-bold mb-4">the Vaulted Archive</h2>
+            <p class="text-lg"></p>
+        </section>
+
+        <section class="blurb">
+            <h2 class="text-xl font-bold mb-2">About Us</h2>
+            <p class="text-md">The Vaulted Archive is represents the history that makes America that greatest country in the world. Americans should know the history of their nation. Our mission is to provide daily bits of information so we can all become better Americans.</p>
         </section>
     </main>
 
     <footer class="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2025 The Vaulted Archive. All rights reserved.</p>
+        <p>&copy; 2025 The Vaulted Archive. All rights reserved. God Bless America. </p>
     </footer>
 </body>
 </html>
