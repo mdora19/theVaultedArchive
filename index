@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">My Website</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="hover:underline">Home</a></li>
+                    <li><a href="#about" class="hover:underline">About</a></li>
+                    <li><a href="#contact" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-8">
+        <section id="home" class="my-8">
+            <h2 class="text-2xl font-bold mb-4">Welcome to My Website</h2>
+            <p class="text-lg">This is a simple website template built with Tailwind CSS. Customize it to your needs!</p>
+        </section>
+
+        <section id="about" class="my-8">
+            <h2 class="text-2xl font-bold mb-4">About Us</h2>
+            <p class="text-lg">We are passionate about creating amazing web experiences for everyone. Join us on our journey!</p>
+        </section>
+
+        <section id="contact" class="my-8">
+            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+            <form class="bg-white shadow-md rounded p-4">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-bold mb-2">Name:</label>
+                    <input type="text" id="name" name="name" class="w-full border rounded p-2" placeholder="Your Name">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="w-full border rounded p-2" placeholder="Your Email">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-sm font-bold mb-2">Message:</label>
+                    <textarea id="message" name="message" class="w-full border rounded p-2" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2025 Your Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
