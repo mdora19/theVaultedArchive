@@ -7,55 +7,68 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Ensure the header stays fixed at the top */
+        html, body {
+            min-height: 100vh; /* Ensures the body is full height */
+            display: flex;
+            flex-direction: column; /* This will make the footer stay at the bottom */
+            margin: 0; /* Removes default margin */
+        }
+        
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            flex-grow: 1;
+            background-color: #f9fafb; /* Set a neutral background color for the facts page */
+        }
+        
         header {
             background-color: rgba(0, 0, 0, 0.7); /* Transparent black header */
-            position: sticky;
-            top: 0;
-            z-index: 10;
+            padding: 1rem;
+            color: white;
+        }
+        
+        footer {
+            margin-top: auto; /* Pushes footer to the bottom */
+            background-color: #2d2d2d; /* Charcoal gray footer */
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        nav, h1, h2, p, a {
+            font-family: 'Lora', serif;
         }
 
-        /* Optional: You can add custom styles for the fact grid */
+        /* Styles for the facts table */
         .fact-table {
             grid-template-columns: 1fr 3fr 2fr; /* Defines 3 columns */
-        }
-
-        /* Prevent the content from overlapping the header */
-        main {
-            margin-top: 80px; /* Adjust this value to match the height of the header */
+            gap: 2rem;
         }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
-
-    <!-- Header Section (same as on the index page) -->
     <header class="text-white p-4 shadow-md">
         <div class="container mx-auto flex items-center space-x-2">
             <img src="https://raw.githubusercontent.com/mdora19/theVaultedArchive/main/liberty_bell_3.jpeg" alt="Profile Picture" class="profile-img">
             <h1 class="text-xl font-bold">The Vaulted Archive</h1>
             <nav class="ml-auto">
                 <ul class="flex space-x-4">
-                    <li><a href="index.html" class="hover:underline">Home</a></li> <!-- Link to the home page -->
-                    <li><a href="facts.html" class="hover:underline">Facts</a></li> <!-- Link to the facts page -->
-                    <li><a href="contact.html" class="hover:underline">Contact</a></li> <!-- Link to the contact page -->
+                    <li><a href="index.html" class="hover:underline">Home</a></li> <!-- Home link -->
+                    <li><a href="facts.html" class="hover:underline">Facts</a></li> <!-- Facts link -->
+                    <li><a href="contact.html" class="hover:underline">Contact</a></li> <!-- Contact link -->
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content (Facts Page) -->
     <main class="container mx-auto py-8">
         <!-- Facts Section -->
         <section id="facts" class="my-8">
-            <h2 class="text-2xl font-bold mb-4">Amazing Facts</h2>
+            <h2 class="text-2xl font-bold mb-4">Fascinating Facts</h2>
 
-            <!-- 3-column layout for Facts -->
-            <div class="grid fact-table gap-6">
-                <!-- Date Column -->
+            <!-- Facts Table (3 columns) -->
+            <div class="grid fact-table">
                 <div class="font-semibold text-lg">Date</div>
-                <!-- Fact Column -->
                 <div class="font-semibold text-lg">Fact</div>
-                <!-- Source Column -->
                 <div class="font-semibold text-lg">Source</div>
 
                 <!-- Fact 1 -->
@@ -73,15 +86,13 @@
                 <div>The bald eagle became the national bird and symbol of the United States.</div>
                 <div class="text-sm">U.S. Congress</div>
 
-                <!-- Add more facts here as needed -->
+                <!-- Additional facts can be added here in the same structure -->
             </div>
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer class="bg-gray-800 text-white text-center py-4">
         <p>&copy; 2025 The Vaulted Archive. All rights reserved. God Bless America.</p>
     </footer>
-
 </body>
 </html>
