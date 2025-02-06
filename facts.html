@@ -5,94 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facts - The Vaulted Archive</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        html, body {
-            min-height: 100vh; /* Ensures the body is full height */
-            display: flex;
-            flex-direction: column; /* This will make the footer stay at the bottom */
-            margin: 0; /* Removes default margin */
-        }
-        
         body {
-            font-family: 'Lora', serif;
+            font-family: 'Arial', sans-serif; /* Simple font */
+            background-color: white; /* White background */
             margin: 0;
-            flex-grow: 1;
-            background-color: #f9fafb; /* Set a neutral background color for the facts page */
-        }
-        
-        header {
-            background-color: rgba(0, 0, 0, 0.7); /* Transparent black header */
-            padding: 1rem;
-            color: white;
-        }
-        
-        footer {
-            margin-top: auto; /* Pushes footer to the bottom */
-            background-color: #2d2d2d; /* Charcoal gray footer */
-            text-align: center;
-            padding: 1rem;
-        }
-        
-        nav, h1, h2, p, a {
-            font-family: 'Lora', serif;
+            padding: 0;
         }
 
-        /* Styles for the facts table */
-        .fact-table {
-            grid-template-columns: 1fr 3fr 2fr; /* Defines 3 columns */
-            gap: 2rem;
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #2d2d2d;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <header class="text-white p-4 shadow-md">
-        <div class="container mx-auto flex items-center space-x-2">
-            <img src="https://raw.githubusercontent.com/mdora19/theVaultedArchive/main/liberty_bell_3.jpeg" alt="Profile Picture" class="profile-img">
-            <h1 class="text-xl font-bold">The Vaulted Archive</h1>
-            <nav class="ml-auto">
-                <ul class="flex space-x-4">
-                    <li><a href="index.html" class="hover:underline">Home</a></li> <!-- Home link -->
-                    <li><a href="facts.html" class="hover:underline">Facts</a></li> <!-- Facts link -->
-                    <li><a href="contact.html" class="hover:underline">Contact</a></li> <!-- Contact link -->
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body>
 
     <main class="container mx-auto py-8">
         <!-- Facts Section -->
         <section id="facts" class="my-8">
-            <h2 class="text-2xl font-bold mb-4">Fascinating Facts</h2>
+            <h2 class="text-2xl font-bold mb-4 text-center">Fascinating Facts</h2>
 
             <!-- Facts Table (3 columns) -->
-            <div class="grid fact-table">
-                <div class="font-semibold text-lg">Date</div>
-                <div class="font-semibold text-lg">Fact</div>
-                <div class="font-semibold text-lg">Source</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Fact</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fact 1 -->
+                    <tr>
+                        <td>July 4, 1776</td>
+                        <td>The Liberty Bell was rung on July 4, 1776 to mark the signing of the Declaration of Independence.</td>
+                        <td>History.com</td>
+                    </tr>
 
-                <!-- Fact 1 -->
-                <div class="text-sm">July 4, 1776</div>
-                <div>The Liberty Bell was rung on July 4, 1776 to mark the signing of the Declaration of Independence.</div>
-                <div class="text-sm">History.com</div>
+                    <!-- Fact 2 -->
+                    <tr>
+                        <td>1872</td>
+                        <td>America was the first country to establish a national park system, beginning with Yellowstone.</td>
+                        <td>National Park Service</td>
+                    </tr>
 
-                <!-- Fact 2 -->
-                <div class="text-sm">1872</div>
-                <div>America was the first country to establish a national park system, beginning with Yellowstone.</div>
-                <div class="text-sm">National Park Service</div>
+                    <!-- Fact 3 -->
+                    <tr>
+                        <td>1782</td>
+                        <td>The bald eagle became the national bird and symbol of the United States.</td>
+                        <td>U.S. Congress</td>
+                    </tr>
 
-                <!-- Fact 3 -->
-                <div class="text-sm">1782</div>
-                <div>The bald eagle became the national bird and symbol of the United States.</div>
-                <div class="text-sm">U.S. Congress</div>
-
-                <!-- Additional facts can be added here in the same structure -->
-            </div>
+                    <!-- Additional facts can be added here in the same structure -->
+                </tbody>
+            </table>
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white text-center py-4">
+    <footer>
         <p>&copy; 2025 The Vaulted Archive. All rights reserved. God Bless America.</p>
     </footer>
+
 </body>
 </html>
+
