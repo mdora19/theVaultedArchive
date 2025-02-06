@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Facts - The Vaulted Archive</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Your existing styles */
+        /* Optional: You can add custom styles for the facts section */
+        .fact-table {
+            grid-template-columns: 1fr 3fr 2fr; /* Defines 3 columns */
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
+
     <header class="text-white p-4 shadow-md">
         <div class="container mx-auto flex items-center space-x-2">
-            <!-- Profile Image and Title -->
             <img src="https://raw.githubusercontent.com/mdora19/theVaultedArchive/main/liberty_bell_3.jpeg" alt="Profile Picture" class="profile-img">
             <h1 class="text-xl font-bold">The Vaulted Archive</h1>
             <nav class="ml-auto">
@@ -25,62 +28,30 @@
             </nav>
         </div>
     </header>
-    
+
     <main class="container mx-auto py-8">
-        <!-- Tabs -->
-        <section id="tabs">
-            <div class="tabs-container flex space-x-4 border-b">
-                <button class="tab-button py-2 px-4 text-lg font-medium text-gray-700 hover:text-blue-500" id="home-tab" onclick="openTab('home')">Home</button>
-                <button class="tab-button py-2 px-4 text-lg font-medium text-gray-700 hover:text-blue-500" id="facts-tab" onclick="openTab('facts')">Facts</button>
-                <button class="tab-button py-2 px-4 text-lg font-medium text-gray-700 hover:text-blue-500" id="contact-tab" onclick="openTab('contact')">Contact</button>
-            </div>
+        <!-- Facts Section -->
+        <section id="facts" class="my-8">
+            <h2 class="text-2xl font-bold mb-4">Amazing Facts</h2>
 
-            <!-- Tab Contents -->
-            <div id="home-content" class="tab-content mt-4">
-                <h2 class="text-2xl font-bold mb-4">Welcome to The Vaulted Archive</h2>
-                <p class="text-lg">Explore fascinating facts and stories about America’s history!</p>
-            </div>
-            <div id="facts-content" class="tab-content mt-4 hidden">
-                <h2 class="text-2xl font-bold mb-4">Amazing Facts</h2>
-                <ul class="list-disc pl-6">
-                    <li>The Liberty Bell was rung on July 4, 1776 to mark the signing of the Declaration of Independence.</li>
-                    <li>America was the first country in the world to have a national park system, starting with Yellowstone in 1872.</li>
-                    <li>The bald eagle became the national bird and symbol of the United States in 1782.</li>
-                    <!-- Add more facts as needed -->
-                </ul>
-            </div>
-            <div id="contact-content" class="tab-content mt-4 hidden">
-                <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-                <p class="text-lg">If you have any questions, feel free to reach out to us!</p>
-            </div>
-        </section>
-    </main>
+            <!-- 3-column layout for Facts -->
+            <div class="grid fact-table gap-6">
+                <!-- Date Column -->
+                <div class="font-semibold text-lg">Date</div>
+                <!-- Fact Column -->
+                <div class="font-semibold text-lg">Fact</div>
+                <!-- Source Column -->
+                <div class="font-semibold text-lg">Source</div>
 
-    <footer class="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2025 The Vaulted Archive. All rights reserved. God Bless America.</p>
-    </footer>
+                <!-- Fact 1 -->
+                <div class="text-sm">July 4, 1776</div>
+                <div>The Liberty Bell was rung on July 4, 1776 to mark the signing of the Declaration of Independence.</div>
+                <div class="text-sm">History.com</div>
 
-    <script>
-        function openTab(tabName) {
-            // Hide all tab contents
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => {
-                content.classList.add('hidden');
-            });
+                <!-- Fact 2 -->
+                <div class="text-sm">1872</div>
+                <div>America was the first country to establish a national park system, beginning with Yellowstone.</div>
+                <div class="text-sm">National Park Service</div>
 
-            // Remove active class from all tabs
-            const buttons = document.querySelectorAll('.tab-button');
-            buttons.forEach(button => {
-                button.classList.remove('text-blue-500', 'font-bold');
-            });
-
-            // Show the selected tab content and highlight the active button
-            document.getElementById(tabName + '-content').classList.remove('hidden');
-            document.getElementById(tabName + '-tab').classList.add('text-blue-500', 'font-bold');
-        }
-
-        // Default open Home tab
-        openTab('home');
-    </script>
-</body>
-</html>
+                <!-- Fact 3 -->
+                <div class="text-sm">17
